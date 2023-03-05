@@ -9,7 +9,7 @@ def compute_height(n, parents):
     # Write this function
     children =[[] for _ in range(n)]
     for i in range(n):
-        if parents[i]!==-1:
+        if parents[i]!=-1:
             children[parents[i]].append(i)
             
             
