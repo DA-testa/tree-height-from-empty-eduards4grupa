@@ -7,14 +7,34 @@ import numpy
 
 def compute_height(n, parents):
     # Write this function
-    max_height = 0
+    children =[[] for _ in range(n)]
+    for i in range(n):
+        if parents[i]!=-1:
+            children[parents[i]].append(i)
+    def height(node)
+    if not children[node]:
+        return 1
+    max_height=0
+    else:
+        p=max(height(child) for child in children[node])
+        return 1+p
+    return height
+        
     # Your code here
     return max_height
 
 
 def main():
     # implement input form keyboard and from files
+    input_veids=input("write K to write from keyboard or F to do it from file    ")
     
+    if input_veids=='K':
+        n=int(input())
+        parents=list(map(int, input().split()))
+        print(compute_height(n, parents))
+        break
+    elif input_veids=='F':
+        file_name=input("wirte name of file ")
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     
