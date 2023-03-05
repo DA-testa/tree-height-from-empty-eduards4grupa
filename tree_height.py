@@ -46,7 +46,7 @@ def main():
         with open ("text/"+file_name, 'r') as file:
             n=int(file.readline())
             parents=list(map(int, file.readline().split()))
-            print(cumpute_height(n, parents))
+            print(compute_height(n, parents))
     #else:
      #   print("You have to write K or F!")
       #  exit()
