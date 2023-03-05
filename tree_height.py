@@ -10,6 +10,8 @@ def compute_height(n, parents):
     children =[[] for _ in range(n)]
     for i in range(n):
         if parents[i]!=-1:
+            root = i
+        else:
             children[parents[i]].append(i)
             
             
@@ -31,12 +33,12 @@ def main():
     # implement input form keyboard and from files
     input_veids=input()
     
-    if input_veids=='K':
+    if 'K' in input_veids:
         n=int(input())
         parents=list(map(int, input().split()))
         print(compute_height(n, parents))
         
-    elif input_veids=='F':
+    elif 'F' in input_veids:
         file_name=input()
         if 'a' in file_name:
             print("file name cant contain a letter")
