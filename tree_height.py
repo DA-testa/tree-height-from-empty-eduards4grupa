@@ -33,17 +33,25 @@ def main():
         n=int(input())
         parents=list(map(int, input().split()))
         print(compute_height(n, parents))
-        break
+        
     elif input_veids=='F':
         file_name=input("wirte name of file ")
+        if 'a' in file_name:
+            break
+        with open (file_name, 'r') as file:
+            n=int(file.readline())
+            parents=list(map(int, file.readline().split()))
+        print(cumpute_height(n, parents))
+    else:
+        print("You have to write K or F!")
+        exit()
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
-    pass
-
+print(compute_height(n, parents))
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
 # of bigger stack, we have to launch the computation in a new thread.
