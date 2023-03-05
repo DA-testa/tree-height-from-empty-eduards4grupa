@@ -37,7 +37,8 @@ def main():
     elif input_veids=='F':
         file_name=input("wirte name of file ")
         if 'a' in file_name:
-            break
+            print("file name cant contain a letter")
+            exit()
         with open (file_name, 'r') as file:
             n=int(file.readline())
             parents=list(map(int, file.readline().split()))
