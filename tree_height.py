@@ -45,9 +45,9 @@ def main():
             n=int(file.readline())
             parents=list(map(int, file.readline().split()))
             print(cumpute_height(n, parents))
-    else:
-        print("You have to write K or F!")
-        exit()
+    #else:
+     #   print("You have to write K or F!")
+      #  exit()
     # let user input file name to use, don't allow file names with letter a
     # account for github input inprecision
     
