@@ -16,12 +16,12 @@ def compute_height(n, parents):
         return 1
     max_height=0
     else:
-        p=max(height(child) for child in children[node])
-        return 1+p
-    return height
+        max_height=max(height(child) for child in children[node])
+        return 1+max_height
+    return max_height
         
     # Your code here
-    return max_height
+    #return max_height
 
 
 def main():
