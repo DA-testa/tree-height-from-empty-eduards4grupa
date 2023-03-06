@@ -22,7 +22,7 @@ def compute_height(n, parents):
         else:
             #max_height=max(height(child) for child in children[node])
             return 1+max(height(child) for child in children[node])
-    root=parents.index(-1)
+    #root=parents.index(-1)
     return height(root)
         
     # Your code here
@@ -43,10 +43,11 @@ def main():
         if 'a' in file_name:
             print("file name cant contain a letter")
             exit()
-        with open ("text/"+file_name, 'r') as file:
-            n=int(file.readline())
-            parents=list(map(int, file.readline().split()))
-            print(compute_height(n, parents))
+        else:
+            with open ("test/"+file_name, 'r') as file:
+                n=int(file.readline())
+                parents=list(map(int, file.readline().split()))
+                print(compute_height(n, parents))
     #else:
      #   print("You have to write K or F!")
       #  exit()
