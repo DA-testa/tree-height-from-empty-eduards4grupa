@@ -40,14 +40,14 @@ def main():
         
     elif 'F' in input_veids:
         file_name=input()
-        if 'a' in file_name:
-            print("file name cant contain a letter")
-            exit()
-        else:
-            with open ("test/"+file_name, 'r') as file:
-                n=int(file.readline())
-                parents=list(map(int, file.readline().split()))
-                print(compute_height(n, parents))
+        #if 'a' in file_name:
+         #   print("file name cant contain a letter")
+        #    exit()
+        #else:
+        with open ("test/"+file_name, 'r') as file:
+            n=int(file.readline())
+            parents=list(map(int, file.readline().split()))
+            print(compute_height(n, parents))
     #else:
      #   print("You have to write K or F!")
       #  exit()
