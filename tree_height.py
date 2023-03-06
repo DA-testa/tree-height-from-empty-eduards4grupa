@@ -33,7 +33,7 @@ def main():
     # implement input form keyboard and from files
     input_veids=input()
     
-    if 'K' in input_veids:
+    if 'I' in input_veids:
         n=int(input())
         parents=list(map(int, input().split()))
         print(compute_height(n, parents))
