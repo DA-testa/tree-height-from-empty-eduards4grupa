@@ -19,9 +19,13 @@ def compute_height(n, parents):
         if not children[node]:
             return 1
             #max_height=0
-        else:
+        for child in children[node]:
+            h=height[child]
+            max_h=max(max_h, h)
+        return max_h+1
+        #else:
             #max_height=max(height(child) for child in children[node])
-            return 1+max(height(child) for child in children[node])
+            #return 1+max(height(child) for child in children[node])
     #root=parents.index(-1)
     return height(root)
         
@@ -44,7 +48,7 @@ def main():
          #   print("file name cant contain a letter")
         #    exit()
         #else:
-        with open ("test/"+file_name, 'r') as file:
+        with open ('./test/' + file_name, 'r') as file:
             n=int(file.readline())
             parents=list(map(int, file.readline().split()))
             print(compute_height(n, parents))
